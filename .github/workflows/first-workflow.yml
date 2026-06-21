@@ -8,6 +8,13 @@ jobs:
     name: First-Job
     runs-on: ubuntu-latest
     steps:
-      - name: run bash command
-        run: echo "Hello World"
+      - name: Before
+        run: ls
+        shell: bash
+
+      - name: checkout
+        uses: actions/checkout@v3
+
+      - name: After
+        run: ls
         shell: bash
